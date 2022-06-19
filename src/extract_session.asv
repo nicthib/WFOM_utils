@@ -1,0 +1,9 @@
+function epochs_out = extract_session(rotf)
+epochs_out = [];
+R = getrunningpulses(rotf);
+ons = []; ofs = [];
+for i=1:numel(R)-1
+    if R
+
+
+

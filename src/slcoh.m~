@@ -1,0 +1,45 @@
+% [cc,fnum] = slcorr(H,skp,win) calculates a sliding correlation matrix.
+% 
+% Inputs: 
+% H: an n x t matrix, where n is the number of spatial components and t isd
+% the number of frames.
+% 
+% skp: the skip value (this is equivalent to opts.skipfactor in
+% getcorrstates())
+% 
+% win: the sliding window to be used (obtained with the function getwin())
+%
+% Outputs:
+% 
+% cc: the correlation matrix output. Note that it will decrease in size as
+% a function of increasing the skip factor.
+
+function [cv,cf] = slcoh(H,skp,win)
+% pad array
+ww = numel(win);
+wr = (numel(win)-1)/2;
+r = size(H,1);
+if wr-round(wr) == 0
+    H = padarray(H,[0 wr],0,'both');
+    widx = 1:skp:size(H,2)-ww;
+    cv = zeros(r,r,numel(widx),1);
+    cf = zeros(r,r,numel(widx),1);
+    fwin = repmat(win,[r 1]); % repmat so that win can be applied to every value in H
+    for i = 1:numel(widx)
+        idx = widx(i):widx(i)+ww-1; % so when i = 1, idx is -sp+(sp+1):sp+(sp+1) = 1:2*sp+1 = 1:numel(win)
+        tmp = H(:,idx).*fwin; % Multiply by tapered window
+        for j = 1:size(H,1)
+            for k = 1:size(H,1)
+                [C,F] = mscohere(tmp(j,:),tmp(k,:),[],[],[],20);
+                [cv(j,k,i),max_idx] = max(C);
+                cf(j,k,i) = F(max_idx);
+            end
+        end
+        i/numel(widx)
+    end
+    cv = reshape(cv,[r^2 size(cv,3)]);
+    cf = reshape(cf,[r^2 size(cf,3)]);
+else
+    disp('Window must be an odd number width')
+    return
+end

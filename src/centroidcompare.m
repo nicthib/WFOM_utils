@@ -1,4 +1,4 @@
-% Compare centroids
+% Compare centroids of behavior vs DFC
 s1 = {'State 1','State 2','State 3','State 4','State 5'};
 
 s2 = {'onset','locomotion', 'offset', 'initial rest', 'sustained rest'};

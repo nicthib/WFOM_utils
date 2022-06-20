@@ -1,5 +1,6 @@
 function [chbo,chbr,chbt] = convert_Hb_2D(data1,data2,c1,c2,bl1,bl2,files)
 %--------------------------------------------------------------------------
+% 2D version of convert_Hb()
 % convert takes in [blue,green] or [green,red] data sets and converts to
 % HbO HbR and HbT 
 %

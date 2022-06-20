@@ -1,3 +1,14 @@
+% behav_states(rotf,ww,skipflag) assigns behavioral states defined by Bahar using rotf (rotary signal).
+% Inputs:
+% rotf: rotary signal (vector)
+% ww: window width of epoch
+% skipflag: boolean that returns either all state values, or only transition values.
+% 
+% Outputs:
+% st: state vector (integer vector)
+% idx: frame index for each values in st.
+% rot_st: rotary values for each state (Nxww matrix, where N is number of states and ww is window width)
+
 function [st,idx,rot_st] =  behav_states(rotf,ww,skipflag)
 wr = (ww-1)/2;
 rotf = rotf(:); % vectorize

@@ -16,6 +16,3 @@ for i = 1:numel(files)
         end        
     end
 end
-
-%try DLC.whisk = zscore(DLC.whisker2.whisk(1:3:end)); catch; m.whisk = 0; end
-%try DLC.pupil = smooth(hampel(zscore(DLC.pupil.Bottom(1:3:end,2)-DLC.pupil.Top(1:3:end,2)),100),100);  catch; m.pupil = 0; end

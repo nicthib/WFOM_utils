@@ -1,3 +1,4 @@
+% Performs circle fitting for raw DFC data, and returns coordinates and p valeus for each data point.
 function [out,perf] = convertpupilcoords(varargin)
 data = varargin{1};
 if numel(varargin) == 1

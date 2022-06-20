@@ -1,6 +1,5 @@
-function dataout = convert_raw_TC(data,m,showsummary)
 % Converts a TC using given metadata. Designed for RS project
-%addpath(genpath('/local_mount/space/juno/1/Software/MIAO'))
+function dataout = convert_raw_TC(data,m,showsummary)
 %%LP Filter
 zlen = 1000; n = size(data.red,1);
 data.red = [zeros(n,zlen),data.red,zeros(n,zlen)];

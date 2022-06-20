@@ -1,6 +1,6 @@
 function [ttn,ttp] = behav_time(TC)
 TC = TC(:);
-% TC is logical valuie of behavior
+% TC is logical value of behavior
 TCf = flipud(TC);
 p = 0; n = 0;
 % previous

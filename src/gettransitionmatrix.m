@@ -1,9 +1,7 @@
-
+function t_mat = gettransitionmatrix(st1,st2,k,show)
 % t_mat = gettransitionmatrix(st,ord,show) calculates the transition matrix
 % for the 1 x t dataset st.
 % row --> column
-
-function t_mat = gettransitionmatrix(st1,st2,k,show)
 t_mat = zeros(k,k);
 for i = 1:numel(st1)
     t_mat(st1(i),st2(i)) = t_mat(st1(i),st2(i)) + 1;

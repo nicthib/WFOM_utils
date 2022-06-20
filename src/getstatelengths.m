@@ -1,4 +1,5 @@
 function [l,y,g] = getstatelengths(st)
+% Gives state lengths for a state vector.
 k = max(st);
 l = cell(k,1);
 y = []; g = [];

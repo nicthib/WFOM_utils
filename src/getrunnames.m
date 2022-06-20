@@ -1,3 +1,5 @@
 function runnames = getrunnames(mouse,runs,allrunnames)
-runnames = allrunnames(cellfun(@(s) ~isempty(regexp(s,runs)),allrunnames)); % Parse out runs that end with B,C,D
-runnames = runnames(cellfun(@(s) ~isempty(regexp(s,mouse)),runnames)); % Parse out runs that are 'mouse'
+% Run filter function. Input is a cell string vector.
+
+runnames = allrunnames(cellfun(@(s) ~isempty(regexp(s,runs)),allrunnames)); % Parse out runs that end with any of the letters in runs
+runnames = runnames(cellfun(@(s) ~isempty(regexp(s,mouse)),runnames)); % Parse out runs that contain mouse ID.

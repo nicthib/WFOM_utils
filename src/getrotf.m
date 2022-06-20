@@ -1,4 +1,6 @@
 function rotf = getrotf(m)
+% extracts unwrapped movement signal from raw rotary data.
+
 nFrames = round(m.movielength*m.framerate);
 if ~isfield(m,'aux')
     m.aux = zeros(2,nFrames);

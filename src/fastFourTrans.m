@@ -1,5 +1,5 @@
 function [n,f,Spectrum, Phase] = fastFourTrans(TimeSeries,Fs,ms)
-% This functin calculates the fast fourier transfor of a one-dimensional time series.
+% This function calculates the fast fourier transfor of a one-dimensional time series.
 % The signal sampling frequency should be fed to the function.
 
 LoS = length(TimeSeries);       % Length of signal

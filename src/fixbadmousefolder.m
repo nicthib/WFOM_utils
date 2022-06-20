@@ -1,3 +1,4 @@
+% Fixes cmdata directories with misplaced webcam files.
 runname = 'runD';
 a = findmousefolder('cm150_1');
 wfiles = dir(fullfile(a,'CCD',runname,'*.jpg'));

@@ -1,6 +1,12 @@
-% Takes an indexed map (IDX) and extracts timecourses from 3D datasets that
-% correspond to those regions. Also erodes if desired
 function [H,Hstd] = getHfromKmeans2(data,IDX,n_erode)
+% Takes an indexed map (IDX) and extracts timecourses from 3D datasets that
+% correspond to those regions. Also erodes if desired.
+% 
+% Inputs: 
+% data: raw data, in shape w x h x t
+% IDX: ROI map for TC extraction
+% n_erode: number of erosion pixels. THis helps clean up components with rough/noisy edges.
+
 ss = size(data);
 if numel(ss) == 3
     data = reshape(data,[prod(ss(1:2)) ss(3)]);

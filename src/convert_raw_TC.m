@@ -1,4 +1,4 @@
-% Converts a TC using given metadata. Designed for RS project
+% Converts a TC using given metadata. Designed for RS project.
 function dataout = convert_raw_TC(data,m,showsummary)
 %%LP Filter
 zlen = 1000; n = size(data.red,1);

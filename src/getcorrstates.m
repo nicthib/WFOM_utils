@@ -1,3 +1,4 @@
+function [st,cnt,d,dmin,cc,p] = getcorrstates(runnames,opts)
 % [st,cnt,d,dmin,cc,p] = getcorrstates(runnames,opts) calculates 
 % correlation states and associated variables for a list of given datasets.
 %
@@ -43,9 +44,7 @@
 %
 % cc: full corr matrix
 %
-% p: state probability, calculated as innter cosine product.
-
-function [st,cnt,d,dmin,cc,p] = getcorrstates(runnames,opts)
+% p: state probability, calculated as inner cosine product.
 
 % Set default options
 if ~isfield(opts,'dokmeans'); opts.dokmeans = 1; end

@@ -1,4 +1,5 @@
 function [ord,IDX_sub,FCIDX_sort] = FC_cluster(H,IDX,k)
+% Clusters FC map into k groups, useful for visualization purposes.
 show = 1;
 % sum bilaterally
 H1 = H(1:size(H,1)/2,:);

@@ -1,3 +1,4 @@
+function [results, opts] = getcorrstates_behav(runnames,opts)
 % [st,cnt,d,dmin,cc,p] = getcorrstates(runnames,opts) calculates 
 % correlation states and associated variables for a list of given datasets.
 %
@@ -40,8 +41,6 @@
 % raw correlation matrix. Note that argmin(d(i)) = st(i)
 %
 % cc: full corr matrix
-
-function [results, opts] = getcorrstates_behav(runnames,opts)
 
 % Set default options
 if ~isfield(opts,'variable'); opts.variable = 'jrgeco'; end

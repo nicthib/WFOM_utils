@@ -1,3 +1,4 @@
+% General putpose script that checks files for a bad aux field in metadata. Sometimes, aux fields contain cells instead of matrices. This fixes them into matrixes.
 mice = {'cm124','cm125','cm126','cm127','cm128'};
 day = '1234567';
 for a = 4:numel(mice)

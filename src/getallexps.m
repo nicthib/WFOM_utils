@@ -1,7 +1,6 @@
-% expnames = getallexps(root, vars) returns the experiment names in the given
-% directory root that meets the variable requirements in the cell string
-% vars.
 function expnames = getallexps(root,vars)
+% expnames = getallexps(root, vars) returns the experiment names in the given
+% directory root that meets the variable requirements in the cell string vars.
 tmp = dir(fullfile(root,'**/*.mat'));
 files = {tmp.name};
 expnames = {};

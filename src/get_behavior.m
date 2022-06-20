@@ -1,4 +1,5 @@
 function behavior = get_behavior(fn)
+% gets all behavior values for given filename fn. Outputs behavior, a struct containing (typically) whisker, pupil and movement data.
 behavior = []; fn_DLC = strrep(fn,'_H.mat','');
 try load('/local_mount/space/dingus/1/RS_analysis/DLC/final/pupil_032521.mat',fn_DLC)
     [ptmp,behavior.pupil_perf] = convertpupilcoords(eval(fn_DLC),.95);

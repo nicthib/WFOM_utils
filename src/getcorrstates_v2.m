@@ -1,3 +1,5 @@
+
+function [results, opts] = getcorrstates_v2(runnames,opts)
 % [st,cnt,d,dmin,cc,p] = getcorrstates(runnames,opts) calculates 
 % correlation states and associated variables for a list of given datasets.
 %
@@ -41,7 +43,7 @@
 %
 % cc: full corr matrix
 
-function [results, opts] = getcorrstates_v2(runnames,opts)
+% rng reset for consistency
 rng(555);
 % Set default options
 showprogbar = 1;

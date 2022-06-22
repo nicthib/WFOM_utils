@@ -1,4 +1,5 @@
 function [L,Rspan,C,IDXout] = splitIDX(IDX)
+%  Light GUI for simple splitting of ROI map. Obsolete in current workflow.
 close all; figure;
 nanidx = IDX == 0;
 IDXtmp = zeros(size(IDX));

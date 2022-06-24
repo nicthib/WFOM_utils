@@ -1,5 +1,5 @@
-
 function show_detailed_FC(FC,IDX,networks)
+% show_detailed_FC(FC,IDX,networks) shows the breakout networks for a given square FC matrix, split into 6 groups by each lateral side (12 in total).
 titles = 'ABCDEF';
 if min(size(FC)) == 1
     FC = reshape(FC,[sqrt(numel(FC)),sqrt(numel(FC))]);
@@ -15,7 +15,7 @@ end
 
 subplot(2,cols,[1 2 1+cols 2+cols])
 imagesc(FC); axis image; axis off; caxis([0 1])
-%title(['State ' k])
+title(['State ' k])
 add_group_lines(networks)
 colorbar
 for j = 1:numel(networks)

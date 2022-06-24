@@ -1,4 +1,5 @@
 function [H,IDXout,nmerge] = merge_H(H,IDX,thr)
+
 nmerge = 0;
 nmerge_prev = NaN;
 while 1

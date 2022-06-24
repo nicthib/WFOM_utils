@@ -1,5 +1,5 @@
 function [Dr_best,Dg_best] = test_jrgeco_conversion(data,bl,Dr,Dg)
-
+% Used to test quality of jrgeco conversion. Calculates this using vessel artifact imgradients with a threshold.
 results = [];
 for i = 1:numel(Dr)
     for j = 1:numel(Dg)

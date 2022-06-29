@@ -1,4 +1,5 @@
 function stim_data = meanstim(m,data)
+% Averages stim responses to a single dataset. Note: m.stimtimes must contain the stimulus times to work. From 2019 RS cohort.
 fn = fieldnames(data);
 
 if isfield(m,'stimframes')

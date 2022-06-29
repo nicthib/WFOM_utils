@@ -1,4 +1,5 @@
 function stim_data = test_stim(m,data,Dr,Dg)
+% Needs to be updated? Not sure what this is for.
 fn = fieldnames(data);
 
 for i = 1:numel(m.stimframes)

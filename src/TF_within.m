@@ -1,5 +1,5 @@
-% This function outputs a TF for day 1 --> day 2 of the same mouse
 function TF = TF_within(mouse,day1,day2)
+% This function outputs a TF for day 1 --> day 2 of the same mouse
 m = makem;
 m.dsf = 2; m.nrot = 2; m.BW = ones(256,256);
 m.run = 'runB'; m.stim = '1';

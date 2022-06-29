@@ -1,4 +1,5 @@
 function [ord st_out] = testoverlap(st1,st2,k)
+% Checks overlap score of two categorical vectors.
 p = perms(1:k);
 for i = 1:size(p,1)
     st_tmp = zeros(size(st2));

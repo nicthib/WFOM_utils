@@ -1,4 +1,5 @@
 function Hnew = LPF(H,cutoffFreq)
+% Creates Low Pass Filter for input H matrix. Applied row wise.
 ss = size(H);
 zlen = 10000;
 lpFilt = designfilt('lowpassiir','FilterOrder',20,...

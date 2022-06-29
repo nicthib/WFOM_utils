@@ -1,4 +1,5 @@
 function showIDX_labels_subregions(IDX,subregions,cmap,bilat,ax)
+% A pretty way of showing off the ROI maps. Has options for labels, colors, etc. ax controls the axes you want to show it in.
 nc = max(IDX(:));
 if ~bilat; nc=nc*2; end
 cmap = [0 0 0;cmap];

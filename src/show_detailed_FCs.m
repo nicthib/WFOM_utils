@@ -1,5 +1,5 @@
-
 function show_detailed_FCs(FCs,IDX,networks,final_ord)
+% Iterated version of show_detailed_FC(), which shows all states in matrix FCs (nx92x92) in one figure.
 titles = 'ABCDEF';
 cols = numel(networks)+2;
 k = size(FCs,1);
